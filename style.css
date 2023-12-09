@@ -1,0 +1,68 @@
+ body {
+   margin: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 150vh;
+   background-color: #ecf0f1;
+   position: relative;
+ }
+
+ .animation-container {
+   position: relative;
+   width: 300px;
+   height: 300px;
+ }
+
+ .animated-block {
+   width: 100px;
+   height: 100px;
+   background-color: #3498db;
+   /* position: absolute; */
+   animation: moveUpDownRightLeft 4s linear infinite, changeColor 4s linear infinite;
+   position: relative;
+ }
+
+ @keyframes moveUpDownRightLeft {
+
+   0%,
+   100% {
+     top: 0;
+     left: 0;
+   }
+
+   25% {
+     top: 0;
+     left: -100%;
+   }
+
+   50% {
+     top: -100%;
+     left: -100%;
+   }
+
+   75% {
+     top: -100%;
+     left: 0;
+   }
+ }
+
+ @keyframes changeColor {
+
+   0%,
+   100% {
+     background-color: #3498db;
+   }
+
+   25% {
+     background-color: #e74c3c;
+   }
+
+   50% {
+     background-color: #2ecc71;
+   }
+
+   75% {
+     background-color: #f39c12;
+   }
+ }
